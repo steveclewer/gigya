@@ -170,6 +170,7 @@ export class Gigya {
             const namespace = endpoint.substring(0, endpoint.indexOf('.'));
             const host = `${namespace}.${dataCenter}.gigya.com`;
 
+            console.log(`Headers ====> ${headers}`);
             response = await this.httpRequest<R>(endpoint, host, requestParams, headers);
 
             // Non-zero error code means failure.
