@@ -103,11 +103,6 @@ export class Gigya {
         return this._request<R>(endpoint, userParams, {});
     }
 
-    /**
-     * Make request to Gigya. Typically, you'll want to use the defined interface (for example gigya.accounts.getAccountInfo) instead of calling request directly.
-     *
-     * If a method is not available, create an issue or pull request at: https://github.com/scotthovestadt/gigya
-     */
     public async requestWithHeaders<R>(endpoint: string, userParams: any = {}, headers: Headers): Promise<GigyaResponse & R> {
         return this._request<R>(endpoint, userParams, headers);
     }
@@ -170,10 +165,6 @@ export class Gigya {
             const namespace = endpoint.substring(0, endpoint.indexOf('.'));
             const host = `${namespace}.${dataCenter}.gigya.com`;
 
-            console.log(`Headers ====> ${JSON.stringify(headers)}`);
-            console.log(`Endpoint ====> ${JSON.stringify(endpoint)}`);
-            console.log(`Host ====> ${JSON.stringify(host)}`);
-            console.log(`Request parameters ====> ${JSON.stringify(requestParams)}`);
             response = await this.httpRequest<R>(endpoint, host, requestParams, headers);
 
             // Non-zero error code means failure.
