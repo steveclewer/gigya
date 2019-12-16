@@ -27,9 +27,6 @@ function log(msg : any) : void {
 export const httpRequest: ProxyHttpRequest = <R>(endpoint: string, host: string, requestParams: any, headers?: Headers) => {
     let start = Date.now();
 
-    console.log(`HEADERS ====> ${JSON.stringify(headers)}`);
-    console.log(`REQUEST PARAMETERS ====> ${JSON.stringify(requestParams)}`);
-
     return new Promise<GigyaResponse & R>((resolve, reject) => {
         const uri = `https://${host}/${endpoint}`;
         request.post(uri, {
