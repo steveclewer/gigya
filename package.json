@@ -4,7 +4,7 @@
   "keywords": [
     "gigya"
   ],
-  "version": "2.0.46",
+  "version": "2.0.47",
   "author": "Scott Hovestadt <scott.hovestadt@gmail.com>",
   "maintainers": [
     "Scott Hovestadt <scott.hovestadt@gmail.com>"
@@ -21,7 +21,7 @@
     "@types/lodash": "^4.14.50",
     "@types/node": "^7.0.0",
     "@types/request": "^0.0.39",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.15",
     "request": "^2.79.0"
   },
   "files": [
